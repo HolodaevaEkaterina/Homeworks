@@ -1,0 +1,8 @@
+C:\Users\acer\source\repos\Fibonacci\Fibonacci\bin\Debug\netcoreapp2.1\Fibonacci.deps.json
+C:\Users\acer\source\repos\Fibonacci\Fibonacci\bin\Debug\netcoreapp2.1\Fibonacci.runtimeconfig.json
+C:\Users\acer\source\repos\Fibonacci\Fibonacci\bin\Debug\netcoreapp2.1\Fibonacci.runtimeconfig.dev.json
+C:\Users\acer\source\repos\Fibonacci\Fibonacci\bin\Debug\netcoreapp2.1\Fibonacci.dll
+C:\Users\acer\source\repos\Fibonacci\Fibonacci\bin\Debug\netcoreapp2.1\Fibonacci.pdb
+C:\Users\acer\source\repos\Fibonacci\Fibonacci\obj\Debug\netcoreapp2.1\Fibonacci.fsprojAssemblyReference.cache
+C:\Users\acer\source\repos\Fibonacci\Fibonacci\obj\Debug\netcoreapp2.1\Fibonacci.dll
+C:\Users\acer\source\repos\Fibonacci\Fibonacci\obj\Debug\netcoreapp2.1\Fibonacci.pdb
