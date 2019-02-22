@@ -1,6 +1,6 @@
-﻿let reverse list=
- let rec newlist s= function
-  |[]-> s
-  |h::t->newlist(h::s) t in
-  newlist [] list
-printfn "%A" ( reverse [1;2;3] )
+﻿let ReverseList list =
+    let rec NewList s = function
+    |[] -> s
+    |h::t -> NewList(h::s) t in
+    NewList [] list
+printfn "%A" ( ReverseList [1; 2; 3] )
