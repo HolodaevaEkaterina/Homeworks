@@ -1,9 +1,5 @@
 image: Visual Studio 2017
 
-install:
-    - cd Degrees2 
-    - dotnet restore
-
 build_script:
-    - cd Degrees2
-    - dotnet build
+    - cmd: cd Degrees2
+    - cmd: dotnet build
