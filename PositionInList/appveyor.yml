@@ -1,5 +1,5 @@
 image: Visual Studio 2017
 
 build_script:
-    - cmd: cd PosootionInList
+    - cmd: cd PositionInList
     - cmd: dotnet build
