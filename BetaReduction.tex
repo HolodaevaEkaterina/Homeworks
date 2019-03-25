@@ -1,0 +1,40 @@
+\documentclass[12pt]{article} 
+
+\usepackage{cmap} 
+\usepackage[T2A]{fontenc} 
+\usepackage[utf8]{inputenc} 
+\usepackage[russian]{babel} 
+\usepackage{graphicx} 
+\usepackage{amsfonts} 
+\usepackage{amsthm,amsmath,amssymb} 
+\usepackage[russian,colorlinks=true,urlcolor=red,linkcolor=blue]{hyperref} 
+\usepackage{enumerate} 
+\usepackage{datetime} 
+\usepackage{fancyhdr} 
+\usepackage{lastpage} 
+\usepackage{color} 
+\usepackage{verbatim} 
+\usepackage{tikz} 
+\usepackage{pgfplots} 
+\usepackage{setspace} 
+\pgfplotsset{compat=newest,compat/show suggested version=false} 
+
+\parskip=0em 
+\parindent=0em 
+
+\voffset=-20mm 
+\textheight=235mm 
+\hoffset=-25mm 
+\textwidth=180mm 
+\headsep=12pt 
+\footskip=20pt 
+
+\setcounter{page}{0} 
+\pagestyle{empty} 
+
+\begin{document}
+	$$((\lambda a.(\lambda b.b\ b)\ (\lambda b.b\ b))\ b)\ ((\lambda c.(c\ b))\ (\lambda a.a))\underset{\beta}{\to}$$
+	$$ ((\lambda b.b\ b)\ b\ ((\lambda c.(c\ b))\ (\lambda a.a)) \underset{\beta}{\to}$$
+	$$ b\ b\ ((\lambda a.a)\ b) \underset{\beta}{\to}$$
+	$$ b\ b\ b$$
+\end{document}
