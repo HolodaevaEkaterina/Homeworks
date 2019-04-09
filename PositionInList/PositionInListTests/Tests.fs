@@ -5,7 +5,7 @@ open FsUnit
 
 
 [<TestClass>]
-type ``positionInList``() =
+type PositionInListTests() =
     [<TestMethod>]
     member test.``List  with 1 appearance on the list`` () =
         PositionInList.firstPosition 0 6 [1; 6; 4; 2; 8; 6] |> should equal (Some 1)
