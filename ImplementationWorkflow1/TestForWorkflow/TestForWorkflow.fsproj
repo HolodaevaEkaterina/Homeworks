@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ParseTree\ParseTree.fsproj" />
+    <ProjectReference Include="..\ImplementationWorkflow1\ImplementationWorkflow1.fsproj" />
   </ItemGroup>
 
 </Project>
