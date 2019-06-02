@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EvenNumbers", "EvenNumbers\EvenNumbers.fsproj", "{8A5303E4-901E-44A0-8465-D51E6B0A2328}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EvenNumbersTest", "EvenNumbersTest\EvenNumbersTest.fsproj", "{D04D6BDA-F653-43BD-97FB-497E92D9B8F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A5303E4-901E-44A0-8465-D51E6B0A2328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A5303E4-901E-44A0-8465-D51E6B0A2328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A5303E4-901E-44A0-8465-D51E6B0A2328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A5303E4-901E-44A0-8465-D51E6B0A2328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D04D6BDA-F653-43BD-97FB-497E92D9B8F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D04D6BDA-F653-43BD-97FB-497E92D9B8F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D04D6BDA-F653-43BD-97FB-497E92D9B8F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D04D6BDA-F653-43BD-97FB-497E92D9B8F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1066FD3A-9AA4-49FF-95CC-D5586B3E1F5B}
+	EndGlobalSection
+EndGlobal
