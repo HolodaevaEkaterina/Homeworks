@@ -1,7 +1,7 @@
 ﻿module EvenNumbers
 
 let evenOnlyWithMap list = 
-    let count = List.map (fun x -> if (x % 2) = 0 then 1 else 0) list |> List.sum    
+    let count = List.map (fun x ->  (x + 1) % 2) list |> List.sum    
     count
 
 let evenOnlyWithFilter list = 

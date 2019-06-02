@@ -14,8 +14,8 @@ module Tests =
 
     [<Test>]
     let``Empty list ``() =
-        Check.Quick(evenOnlyWithMap list1 = evenOnlyWithFilter list1) 
-        Check.Quick(evenOnlyWithMap list1 = evenOnlyWithFold list1)
+        Check.QuickThrowOnFailure(evenOnlyWithMap list1 = evenOnlyWithFilter list1) 
+        Check.QuickThrowOnFailure(evenOnlyWithMap list1 = evenOnlyWithFold list1)
         evenOnlyWithFold list1 |> should equal 0
 
     [<Test>]
