@@ -1,17 +1,20 @@
 ﻿  module SequenceOfBrackets
 
-  let rec checkBraskets (ourString : string) acc count1 count2 count3 =
+  let funHelper bracket = bracket <= 0
+      
+  let rec checkBraсkets (ourString : string) helper round square figured =
 
-    match ourString with
-    |_  when ourString.Length = acc -> if count1 = 0 && count2 = 0 && count3 = 0 then Some true
-                                       else Some false
-    |_  when ourString.[acc] = '(' -> checkBraskets ourString (acc + 1) (count1 + 1) count2 count3
-    |_  when ourString.[acc] = ')' -> if count1 <= 0  then Some false
-                                      else checkBraskets ourString (acc + 1) (count1 - 1) count2 count3   
-    |_  when ourString.[acc] = '{' -> checkBraskets ourString (acc + 1) count1 (count2 + 1) count3
-    |_  when ourString.[acc] = '}' -> if count2 <= 0  then Some false
-                                      else checkBraskets ourString (acc + 1) count1 (count2 - 1) count3  
-    |_  when ourString.[acc] = '[' -> checkBraskets ourString (acc + 1) count1 count2 (count3 + 1)
-    |_  when ourString.[acc] = ']' -> if count3 <= 0  then Some false
-                                      else checkBraskets ourString (acc + 1) count1 count2 (count3 - 1)  
-    |_ -> checkBraskets ourString (acc + 1) count1  count2 count3   
+      match ourString with
+      |_ when ourString = "" -> None
+      |_ when ourString.Length = helper -> if round = 0 && square = 0 && figured = 0 then Some true
+                                           else Some false
+      |_ when ourString.[helper] = '(' -> checkBraсkets ourString (helper + 1) (round + 1) square figured
+      |_ when ourString.[helper] = ')' -> if funHelper round then Some false
+                                          else checkBraсkets ourString (helper + 1) (round - 1) square figured   
+      |_ when ourString.[helper] = '{' -> checkBraсkets ourString (helper + 1) round (square + 1) figured
+      |_ when ourString.[helper] = '}' -> if funHelper square then Some false
+                                          else checkBraсkets ourString (helper + 1) round (square - 1) figured  
+      |_ when ourString.[helper] = '[' -> checkBraсkets ourString (helper + 1) round square (figured + 1)
+      |_ when ourString.[helper] = ']' -> if funHelper figured then Some false
+                                          else checkBraсkets ourString (helper + 1) round square (figured - 1)  
+      |_ -> checkBraсkets ourString (helper + 1) round  square figured   
