@@ -4,6 +4,7 @@
     type ILazy<'a> =
         abstract member Get: unit -> 'a
 
+/// Interface implementation without synchronization
     type SingleLazy<'a> (supplier : unit -> 'a) = 
         
         let mutable var = None
@@ -17,6 +18,7 @@
                     var <- Some res
                     res
 
+/// Interface implementation with multi-threaded operation guarantee
     type MultiLazy<'a> (supplier : unit -> 'a) = 
 
         let protect = obj()
@@ -24,17 +26,19 @@
         
         interface ILazy<'a> with 
             member this.Get () = 
-                Monitor.Enter protect
-                try
                     match var with
                     | Some x -> x
                     | None ->
-                        let res = supplier ()
-                        var <- Some res
-                        Option.get var
-                finally
-                    Monitor.Exit protect                  
-                
+                        lock protect (fun () ->
+                             match var with
+                             | Some x -> x
+                             | None ->
+                                 let res = supplier ()
+                                 var <- Some res
+                                 Option.get var
+                        )
+                                        
+/// The implementation of the interface with the guarantee of work in multi-threaded mode, but lock-free               
     type LockFreeLazy<'a> (supplier : unit -> 'a) = 
 
         let mutable var = None
@@ -50,6 +54,7 @@
 
 open LazyCalculation
 
+/// Class for creating different interface implementations
 module LazyFactory =
 
     type LazyFactory() =
