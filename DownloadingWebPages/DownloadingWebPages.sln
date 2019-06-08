@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "DownloadingWebPages", "DownloadingWebPages\DownloadingWebPages.fsproj", "{6AFAB088-4DE2-4C08-B0A5-76D739ED2085}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TestForTask", "TestForTask\TestForTask.fsproj", "{B9B63F4E-AE6C-4DEC-B5C2-746E339676E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AFAB088-4DE2-4C08-B0A5-76D739ED2085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AFAB088-4DE2-4C08-B0A5-76D739ED2085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AFAB088-4DE2-4C08-B0A5-76D739ED2085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AFAB088-4DE2-4C08-B0A5-76D739ED2085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9B63F4E-AE6C-4DEC-B5C2-746E339676E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9B63F4E-AE6C-4DEC-B5C2-746E339676E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9B63F4E-AE6C-4DEC-B5C2-746E339676E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9B63F4E-AE6C-4DEC-B5C2-746E339676E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {258CCE94-1153-4512-8B5C-71BE2AEB28BE}
+	EndGlobalSection
+EndGlobal
