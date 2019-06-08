@@ -1,5 +1,7 @@
 ﻿module ObjectiveOrientedProgramming
 
+open System
+
 /// Сreating an operating system model
 type OS(name : string, probability : double) =
     member val Name = name with get
@@ -12,7 +14,7 @@ type Machine(os : OS, connectedMachine : list<Machine>) =
     member val TimeOfInfection = 0 with get, set
 
 /// Network model creation
-type Net(computers : list<Machine>) =
+type Net(computers : list<Machine>, rand : Random) =
    let mutable time = 1
    let areAllMachinesInfected(connectedComp : list<Machine>) = 
        not <| List.exists(fun (elem : Machine) -> elem.TimeOfInfection <> time) connectedComp
@@ -20,7 +22,7 @@ type Net(computers : list<Machine>) =
     
 ///1 step virus action 
    member this.VirusEpidemic() =
-       let random = System.Random().NextDouble()
+       let random = rand.NextDouble()
        for comp in computers do
            if comp.TimeOfInfection = time then
                for connectedComp in comp.Connected do
