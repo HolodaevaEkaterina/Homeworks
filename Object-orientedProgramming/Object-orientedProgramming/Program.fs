@@ -11,8 +11,6 @@ type Machine(os : OS, connectedMachine : list<Machine>) =
     member val Connected = connectedMachine with get, set
     member val TimeOfInfection = 0 with get, set
 
-let random = System.Random().NextDouble()
-
 /// Network model creation
 type Net(computers : list<Machine>) =
    let mutable time = 1
@@ -22,6 +20,7 @@ type Net(computers : list<Machine>) =
     
 ///1 step virus action 
    member this.VirusEpidemic() =
+       let random = System.Random().NextDouble()
        for comp in computers do
            if comp.TimeOfInfection = time then
                for connectedComp in comp.Connected do
