@@ -20,8 +20,7 @@ let ``Network with 4 computers supporting a connected graph(All computers must b
     fourthtMachine.Connected <- [thirdMachine]
     firstMachine.TimeOfInfection <- 1
     let computers = [firstMachine; secondMachine; thirdMachine; fourthtMachine]
-    let rand = new Random((int)DateTime.UtcNow.Ticks)
-    let net = Net(computers, rand)
+    let net = Net(computers)
     net.NetworkOperationModel()
     Assert.IsTrue(net.Computers.[0].TimeOfInfection <> 0)
     Assert.IsTrue(net.Computers.[1].TimeOfInfection <> 0)
@@ -44,8 +43,7 @@ let ``Network with 4 computers in which 2 computers will never be infected ``() 
     fourthtMachine.Connected <- [thirdMachine]
     firstMachine.TimeOfInfection <- 1
     let computers = [firstMachine; secondMachine; thirdMachine; fourthtMachine]
-    let rand = new Random((int)DateTime.UtcNow.Ticks)
-    let net = Net(computers, rand)
+    let net = Net(computers)
     net.NetworkOperationModel()
     Assert.IsTrue(net.Computers.[0].TimeOfInfection <> 0)
     Assert.IsTrue(net.Computers.[1].TimeOfInfection <> 0)
@@ -69,8 +67,7 @@ let ``Network with 2 infected computers``() =
     firstMachine.TimeOfInfection <- 1
     thirdMachine.TimeOfInfection <- 1
     let computers = [firstMachine; secondMachine; thirdMachine; fourthtMachine]
-    let rand = new Random((int)DateTime.UtcNow.Ticks)
-    let net = Net(computers, rand)
+    let net = Net(computers)
     net.NetworkOperationModel()
     Assert.IsTrue(net.Computers.[0].TimeOfInfection <> 0)
     Assert.IsTrue(net.Computers.[1].TimeOfInfection <> 0)
